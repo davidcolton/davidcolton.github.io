@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>David Colton's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-02-23T10:30:00+00:00</updated><entry><title>Pelican Markdown Test Page</title><link href="/articles/2020/02/23/markdown_examples/" rel="alternate"></link><published>2020-02-23T10:30:00+00:00</published><updated>2020-02-23T10:30:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-02-23:/articles/2020/02/23/markdown_examples/</id><summary type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
+&lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
+&lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with some additional samples of my own.&lt;/p&gt;
+&lt;p&gt;As a nice side affect of putting this page together I now have a reference page should I decide to change the Pelican theme I'm using to ensure that all my other articles are still rendering as expected as this test page contains most, if not all, of the markdown styles that I use on a regular basis.&lt;/p&gt;
+&lt;p&gt;For a complete markdown reference refer to &lt;a href="https://www.markdownguide.org/"&gt;The Markdown Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Markdown Examples Part 1&lt;/h2&gt;
+&lt;p&gt;Before you learn anything else you should know be aware of the following:&lt;/p&gt;
+&lt;h3&gt;Heading Best Practices&lt;/h3&gt;
+&lt;p&gt;Markdown applications don’t agree on how to handle missing blank lines between a heading and the surrounding paragraphs. For compatibility, separate paragraphs and headings with one or more blank lines.&lt;/p&gt;
+&lt;h3&gt;Paragraphs&lt;/h3&gt;
+&lt;p&gt;To create paragraphs, use a blank line to separate one or more lines of text.&lt;/p&gt;
+&lt;h3&gt;Line Breaks&lt;/h3&gt;
+&lt;p&gt;To create a line break (&lt;br&gt;), end a line with two or more spaces, and then type return.&lt;/p&gt;
+&lt;h3&gt;Some more examples&lt;/h3&gt;
+&lt;p&gt;Basic markdown examples are shown below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;This text is **bold** and this text is also __bold__  
+This text is *italic* and this text is also _italic_  
+This text is **_italic and bold_**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt; and this text is also &lt;strong&gt;bold&lt;/strong&gt;   &lt;br&gt;
+This text is &lt;em&gt;italic&lt;/em&gt; and this text is also &lt;em&gt;italic&lt;/em&gt;&lt;br&gt;
+This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can add headers to your markdown to divide your posts into related sections:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# A H1 heading  
+## A H2 heading  
+### A H3 heading  
+#### A H4 heading  
+##### A H5 heading  
+###### A H6 heading
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;A H1 heading&lt;/h1&gt;
+&lt;h2&gt;A H2 heading&lt;/h2&gt;
+&lt;h3&gt;A H3 heading&lt;/h3&gt;
+&lt;h4&gt;A H4 heading&lt;/h4&gt;
+&lt;h5&gt;A H5 heading&lt;/h5&gt;
+&lt;h6&gt;A H6 heading&lt;/h6&gt;
+&lt;p&gt;A nice additional way to separate different sections of you post is to insert a horizontal line is to add three or more hyphens:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;In Mathew's original post he defines a list with numbers as:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A list with numbers:
+1. One
+2. Two
+3. Three
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When rendered this looks like:&lt;/p&gt;
+&lt;p&gt;A list with numbers:
+1. One
+2. Two
+3. Three&lt;/p&gt;
+&lt;p&gt;There are two issues with this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There should be an empty line between the text preceding the list and the list itself. See notes above about adding empty blank lines between headings and paragraphs. This rule applied to everything.&lt;/li&gt;
+&lt;li&gt;Typically you don't provide the numbers. All items in the list are preceded with a &lt;code&gt;1.&lt;/code&gt; and the list is then automatically numbered. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The correct way to define a list of numbers is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A list with numbers:
+
+1. One
+1. Two
+1. Three
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And this is how it then correctly displays:&lt;/p&gt;
+&lt;p&gt;A list with numbers:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;One&lt;/li&gt;
+&lt;li&gt;Two&lt;/li&gt;
+&lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can also have a list of number with a sublist of numbers:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Top Level&lt;ol&gt;
+&lt;li&gt;Sub level 1&lt;/li&gt;
+&lt;li&gt;Sub level 2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Top Level Again&lt;ol&gt;
+&lt;li&gt;Sub level again&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And the markdown for sublists like this is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;1. Top Level  
+    1. Sub level 1
+    1. Sub level 2
+1. Top Level Again  
+    1. Sub level again
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The list with bullets example suffers from the same issue as the numbered list in that the example markdown given does not have a blank line between the text and the bulleted list. In markdown you always have to place a blank line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A list with bullets:
+
+* One
+* Two
+* Three
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A list with bullets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;li&gt;Bullet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's a blockquote:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Simple is better than complex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Simple is better than complex&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For some reason the example given my Mathew used &lt;code&gt;&amp;amp;gt;&lt;/code&gt;. Not sure why.&lt;/p&gt;
+&lt;p&gt;Here's the table example in Mathew's post:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;| Column1 | Column 2 | Column 3 |  
+|---|---|---|  
+| Value 1 | Value 2 | Value 3 |  
+| Value 4 | Value 5 | Value 6 |  
+| Value 7 | Value 8 | Value 9 |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And here is the table rendered:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column1&lt;/th&gt;
+&lt;th&gt;Column 2&lt;/th&gt;
+&lt;th&gt;Column 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 1&lt;/td&gt;
+&lt;td&gt;Value 2&lt;/td&gt;
+&lt;td&gt;Value 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 4&lt;/td&gt;
+&lt;td&gt;Value 5&lt;/td&gt;
+&lt;td&gt;Value 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Value 7&lt;/td&gt;
+&lt;td&gt;Value 8&lt;/td&gt;
+&lt;td&gt;Value 9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;br/&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I'm not sure it it's a Pelican thing or the template used but when rendered this looks really poor in my opinion. One way around this it to use HTML directly with CSS styling. I need to investigate this further.&lt;/p&gt;
+&lt;p&gt;Here's a HTML table with CSS Styling:&lt;/p&gt;
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+.tg .tg-hmp3{background-color:#D2E4FC;text-align:left;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
+.tg .tg-lqy6{text-align:right;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+&lt;/style&gt;
+
+&lt;table class="tg"&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-hmp3"&gt;No&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;Competition&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;John&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;Adam&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;Robert&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;Paul&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;1&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;Swimming&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;1:30&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;2:05&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;1:15&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;1:41&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-hmp3"&gt;2&lt;/td&gt;
+    &lt;td class="tg-hmp3"&gt;Running&lt;/td&gt;
+    &lt;td class="tg-mb3i"&gt;15:30&lt;/td&gt;
+    &lt;td class="tg-mb3i"&gt;14:10&lt;/td&gt;
+    &lt;td class="tg-mb3i"&gt;15:45&lt;/td&gt;
+    &lt;td class="tg-mb3i"&gt;16:00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;3&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;Shooting&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;70%&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;55%&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;90%&lt;/td&gt;
+    &lt;td class="tg-lqy6"&gt;88%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tablesgenerator.com/html_tables"&gt;Table Generator&lt;/a&gt; is one simple way to generate HTML code for tables but there are many out there to choose from.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Markdown Examples Part 2&lt;/h2&gt;
+&lt;p&gt;Images can be displayed in Markdown.  &lt;/p&gt;
+&lt;p&gt;Text within the square brackets is the image name. The path to the image goes between the round brackets.&lt;br&gt;
+The {static} tag indicates the image is stored in the content folder. This setting can be changed in &lt;code&gt;pelicanconf.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="python logo" src="/images/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;Links to downloadable content such as PDF files are written similarly to image files but with no ! symbol at the beginning.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/pdf/pelican.pdf"&gt;Pelican Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A link to a different blog post on our website is written exactly the same.&lt;/p&gt;
+&lt;p&gt;Text within the square brackets can be clicked on to travel to the website between the curly brackets.
+The &lt;code&gt;{filename}&lt;/code&gt; tag indicates we want to follow the link to a webpage rather than the static file it was generated from.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/articles/2020/02/23/markdown_examples/"&gt;First Post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or we can link to another external website by supplying the web address.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pypi.org"&gt;Python Package Index&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Refer to Mathew's page directly for the setting that need to be added to the &lt;code&gt;peliconconf.py&lt;/code&gt; file. One small disadvantage of having to define links using &lt;code&gt;{static}&lt;/code&gt; or &lt;code&gt;{filename}&lt;/code&gt; is that it makes editing the markdown files in a editor slightly more difficult as you are not actually going to see a preview or inline rendering of the link content. A small annoyance. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Markdown Examples Part 3&lt;/h2&gt;
+&lt;p&gt;Code blocks are preceded by an indent (4 spaces), three &lt;code&gt;:&lt;/code&gt; symbols and the name of the language.  &lt;/p&gt;
+&lt;p&gt;All of the following code will be highlighted while the text is indented.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+
+&lt;span class="nd"&gt;@do_twice&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee!&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And the raw markdown to produce this code block looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;:::python
+def do_twice(func):
+    def wrapper_do_twice(*args, **kwargs):
+        return func(*args, **kwargs).lower()
+return wrapper_do_twice
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="blogging"></category><category term="markdown"></category><category term="pygments"></category></entry></feed>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Pelican Markdown Test Page - David Colton's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/articles/2020/02/23/markdown_examples/">
+
+        <meta name="author" content="David Colton" />
+        <meta name="keywords" content="markdown,pygments" />
+        <meta name="description" content="Examine how Markdown is rendered with Pelican These examples of markdown are a modified form taken from Build A Blog With Pelican And Python - Pt. 2 Creating Content. I did find some issues that I mention as I go through all the examples. I&#39;ve also augmented the original examples with …" />
+
+        <meta property="og:site_name" content="David Colton's Blog" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Pelican Markdown Test Page"/>
+        <meta property="og:url" content="/articles/2020/02/23/markdown_examples/"/>
+        <meta property="og:description" content="Examine how Markdown is rendered with Pelican These examples of markdown are a modified form taken from Build A Blog With Pelican And Python - Pt. 2 Creating Content. I did find some issues that I mention as I go through all the examples. I&#39;ve also augmented the original examples with …"/>
+        <meta property="article:published_time" content="2020-02-23" />
+            <meta property="article:section" content="blogging" />
+            <meta property="article:tag" content="markdown" />
+            <meta property="article:tag" content="pygments" />
+            <meta property="article:author" content="David Colton" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.flatly.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="David Colton's Blog ATOM Feed"/>
+
+        <link href="/feeds/blogging.atom.xml" type="application/atom+xml" rel="alternate"
+              title="David Colton's Blog blogging ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+David Colton's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/category/blogging">Blogging</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/articles/2020/02/23/markdown_examples/"
+                       rel="bookmark"
+                       title="Permalink to Pelican Markdown Test Page">
+                        Pelican Markdown Test Page
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-02-23T10:30:00+00:00"> Sun 23 February 2020</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/markdown">markdown</a>
+        /
+	<a href="/tag/pygments">pygments</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h1>Examine how Markdown is rendered with Pelican</h1>
+<p>These examples of markdown are a modified form taken from <a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/">Build A Blog With Pelican And Python - Pt. 2 Creating Content</a>. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with some additional samples of my own.</p>
+<p>As a nice side affect of putting this page together I now have a reference page should I decide to change the Pelican theme I'm using to ensure that all my other articles are still rendering as expected as this test page contains most, if not all, of the markdown styles that I use on a regular basis.</p>
+<p>For a complete markdown reference refer to <a href="https://www.markdownguide.org/">The Markdown Guide</a>.</p>
+<h2>Markdown Examples Part 1</h2>
+<p>Before you learn anything else you should know be aware of the following:</p>
+<h3>Heading Best Practices</h3>
+<p>Markdown applications don’t agree on how to handle missing blank lines between a heading and the surrounding paragraphs. For compatibility, separate paragraphs and headings with one or more blank lines.</p>
+<h3>Paragraphs</h3>
+<p>To create paragraphs, use a blank line to separate one or more lines of text.</p>
+<h3>Line Breaks</h3>
+<p>To create a line break (<br>), end a line with two or more spaces, and then type return.</p>
+<h3>Some more examples</h3>
+<p>Basic markdown examples are shown below:</p>
+<div class="highlight"><pre><span></span><code>This text is **bold** and this text is also __bold__  
+This text is *italic* and this text is also _italic_  
+This text is **_italic and bold_**
+</code></pre></div>
+
+
+<p>This text is <strong>bold</strong> and this text is also <strong>bold</strong>   <br>
+This text is <em>italic</em> and this text is also <em>italic</em><br>
+This text is <strong><em>italic and bold</em></strong></p>
+<p>You can add headers to your markdown to divide your posts into related sections:</p>
+<div class="highlight"><pre><span></span><code># A H1 heading  
+## A H2 heading  
+### A H3 heading  
+#### A H4 heading  
+##### A H5 heading  
+###### A H6 heading
+</code></pre></div>
+
+
+<h1>A H1 heading</h1>
+<h2>A H2 heading</h2>
+<h3>A H3 heading</h3>
+<h4>A H4 heading</h4>
+<h5>A H5 heading</h5>
+<h6>A H6 heading</h6>
+<p>A nice additional way to separate different sections of you post is to insert a horizontal line is to add three or more hyphens:</p>
+<div class="highlight"><pre><span></span><code>---
+</code></pre></div>
+
+
+<hr>
+<p>In Mathew's original post he defines a list with numbers as:</p>
+<div class="highlight"><pre><span></span><code>A list with numbers:
+1. One
+2. Two
+3. Three
+</code></pre></div>
+
+
+<p>When rendered this looks like:</p>
+<p>A list with numbers:
+1. One
+2. Two
+3. Three</p>
+<p>There are two issues with this:</p>
+<ol>
+<li>There should be an empty line between the text preceding the list and the list itself. See notes above about adding empty blank lines between headings and paragraphs. This rule applied to everything.</li>
+<li>Typically you don't provide the numbers. All items in the list are preceded with a <code>1.</code> and the list is then automatically numbered. </li>
+</ol>
+<p>The correct way to define a list of numbers is:</p>
+<div class="highlight"><pre><span></span><code>A list with numbers:
+
+1. One
+1. Two
+1. Three
+</code></pre></div>
+
+
+<p>And this is how it then correctly displays:</p>
+<p>A list with numbers:</p>
+<ol>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ol>
+<p>You can also have a list of number with a sublist of numbers:</p>
+<ol>
+<li>Top Level<ol>
+<li>Sub level 1</li>
+<li>Sub level 2</li>
+</ol>
+</li>
+<li>Top Level Again<ol>
+<li>Sub level again</li>
+</ol>
+</li>
+</ol>
+<p>And the markdown for sublists like this is:</p>
+<div class="highlight"><pre><span></span><code>1. Top Level  
+    1. Sub level 1
+    1. Sub level 2
+1. Top Level Again  
+    1. Sub level again
+</code></pre></div>
+
+
+<p>The list with bullets example suffers from the same issue as the numbered list in that the example markdown given does not have a blank line between the text and the bulleted list. In markdown you always have to place a blank line:</p>
+<div class="highlight"><pre><span></span><code>A list with bullets:
+
+* One
+* Two
+* Three
+</code></pre></div>
+
+
+<p>A list with bullets:</p>
+<ul>
+<li>Bullet</li>
+<li>Bullet</li>
+<li>Bullet</li>
+</ul>
+<p>Here's a blockquote:</p>
+<div class="highlight"><pre><span></span><code>&gt; Simple is better than complex
+</code></pre></div>
+
+
+<blockquote>
+<p>Simple is better than complex</p>
+</blockquote>
+<p>For some reason the example given my Mathew used <code>&amp;gt;</code>. Not sure why.</p>
+<p>Here's the table example in Mathew's post:</p>
+<div class="highlight"><pre><span></span><code>| Column1 | Column 2 | Column 3 |  
+|---|---|---|  
+| Value 1 | Value 2 | Value 3 |  
+| Value 4 | Value 5 | Value 6 |  
+| Value 7 | Value 8 | Value 9 |
+</code></pre></div>
+
+
+<p>And here is the table rendered:</p>
+<table>
+<thead>
+<tr>
+<th>Column1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value 1</td>
+<td>Value 2</td>
+<td>Value 3</td>
+</tr>
+<tr>
+<td>Value 4</td>
+<td>Value 5</td>
+<td>Value 6</td>
+</tr>
+<tr>
+<td>Value 7</td>
+<td>Value 8</td>
+<td>Value 9</td>
+</tr>
+<tr>
+<td><br/></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>I'm not sure it it's a Pelican thing or the template used but when rendered this looks really poor in my opinion. One way around this it to use HTML directly with CSS styling. I need to investigate this further.</p>
+<p>Here's a HTML table with CSS Styling:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+.tg .tg-hmp3{background-color:#D2E4FC;text-align:left;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
+.tg .tg-lqy6{text-align:right;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-baqh" colspan="6">Results</th>
+  </tr>
+  <tr>
+    <td class="tg-hmp3">No</td>
+    <td class="tg-hmp3">Competition</td>
+    <td class="tg-hmp3">John</td>
+    <td class="tg-hmp3">Adam</td>
+    <td class="tg-hmp3">Robert</td>
+    <td class="tg-hmp3">Paul</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1</td>
+    <td class="tg-0lax">Swimming</td>
+    <td class="tg-lqy6">1:30</td>
+    <td class="tg-lqy6">2:05</td>
+    <td class="tg-lqy6">1:15</td>
+    <td class="tg-lqy6">1:41</td>
+  </tr>
+  <tr>
+    <td class="tg-hmp3">2</td>
+    <td class="tg-hmp3">Running</td>
+    <td class="tg-mb3i">15:30</td>
+    <td class="tg-mb3i">14:10</td>
+    <td class="tg-mb3i">15:45</td>
+    <td class="tg-mb3i">16:00</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3</td>
+    <td class="tg-0lax">Shooting</td>
+    <td class="tg-lqy6">70%</td>
+    <td class="tg-lqy6">55%</td>
+    <td class="tg-lqy6">90%</td>
+    <td class="tg-lqy6">88%</td>
+  </tr>
+</table>
+
+<p><br/></p>
+<p><a href="https://www.tablesgenerator.com/html_tables">Table Generator</a> is one simple way to generate HTML code for tables but there are many out there to choose from.</p>
+<hr>
+<h2>Markdown Examples Part 2</h2>
+<p>Images can be displayed in Markdown.  </p>
+<p>Text within the square brackets is the image name. The path to the image goes between the round brackets.<br>
+The {static} tag indicates the image is stored in the content folder. This setting can be changed in <code>pelicanconf.py</code>.</p>
+<p><img alt="python logo" src="/images/python_icon.png"></p>
+<p>Links to downloadable content such as PDF files are written similarly to image files but with no ! symbol at the beginning.</p>
+<p><a href="/pdf/pelican.pdf">Pelican Documentation</a></p>
+<p>A link to a different blog post on our website is written exactly the same.</p>
+<p>Text within the square brackets can be clicked on to travel to the website between the curly brackets.
+The <code>{filename}</code> tag indicates we want to follow the link to a webpage rather than the static file it was generated from.</p>
+<p><a href="/articles/2020/02/23/markdown_examples/">First Post</a></p>
+<p>Or we can link to another external website by supplying the web address.</p>
+<p><a href="https://pypi.org">Python Package Index</a></p>
+<p>Refer to Mathew's page directly for the setting that need to be added to the <code>peliconconf.py</code> file. One small disadvantage of having to define links using <code>{static}</code> or <code>{filename}</code> is that it makes editing the markdown files in a editor slightly more difficult as you are not actually going to see a preview or inline rendering of the link content. A small annoyance. </p>
+<hr>
+<h2>Markdown Examples Part 3</h2>
+<p>Code blocks are preceded by an indent (4 spaces), three <code>:</code> symbols and the name of the language.  </p>
+<p>All of the following code will be highlighted while the text is indented.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">wrapper_do_twice</span>
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+<span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>And the raw markdown to produce this code block looks like:</p>
+<div class="highlight"><pre><span></span><code>:::python
+def do_twice(func):
+    def wrapper_do_twice(*args, **kwargs):
+        return func(*args, **kwargs).lower()
+return wrapper_do_twice
+...
+</code></pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <ul class="list-group" id="social">
+    <li class="list-group-item"><a href="https://twitter.com/David__Colton"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+    <li class="list-group-item"><a href="https://github.com/davidcolton/"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Social -->
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="http://python.org/" target="_blank">Python.org</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://codechalleng.es/" target="_blank">PyBites</a>
+    </li>
+    <li class="list-group-item">
+      <a href="http://getpelican.com/" target="_blank">Pelican</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2020 David Colton
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+
+
+</body>
+</html>
