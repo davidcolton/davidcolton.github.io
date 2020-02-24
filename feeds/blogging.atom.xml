@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>David Colton's Blog - blogging</title><link href="/" rel="alternate"></link><link href="/feeds/blogging.atom.xml" rel="self"></link><id>/</id><updated>2020-02-23T10:30:00+00:00</updated><entry><title>Pelican Markdown Test Page</title><link href="/articles/2020/02/23/markdown_examples/" rel="alternate"></link><published>2020-02-23T10:30:00+00:00</published><updated>2020-02-23T10:30:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-02-23:/articles/2020/02/23/markdown_examples/</id><summary type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>David Colton's Blog - blogging</title><link href="/" rel="alternate"></link><link href="/feeds/blogging.atom.xml" rel="self"></link><id>/</id><updated>2020-02-24T10:35:00+00:00</updated><entry><title>Pelican Markdown Test Page</title><link href="/articles/2020/02/23/markdown_examples/" rel="alternate"></link><published>2020-02-23T10:30:00+00:00</published><updated>2020-02-24T10:35:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-02-23:/articles/2020/02/23/markdown_examples/</id><summary type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
 &lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
 &lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with some additional samples of my own.&lt;/p&gt;
 &lt;p&gt;As a nice side affect of putting this page together I now have a reference page should I decide to change the Pelican theme I'm using to ensure that all my other articles are still rendering as expected as this test page contains most, if not all, of the markdown styles that I use on a regular basis.&lt;/p&gt;
@@ -11,7 +11,7 @@
 &lt;h3&gt;Paragraphs&lt;/h3&gt;
 &lt;p&gt;To create paragraphs, use a blank line to separate one or more lines of text.&lt;/p&gt;
 &lt;h3&gt;Line Breaks&lt;/h3&gt;
-&lt;p&gt;To create a line break (&lt;br&gt;), end a line with two or more spaces, and then type return.&lt;/p&gt;
+&lt;p&gt;To create a line break (&amp;lt;br&amp;gt;), end a line with two or more spaces, and then type return.&lt;/p&gt;
 &lt;h3&gt;Some more examples&lt;/h3&gt;
 &lt;p&gt;Basic markdown examples are shown below:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;This text is **bold** and this text is also __bold__  
@@ -240,7 +240,7 @@ The &lt;code&gt;{filename}&lt;/code&gt; tag indicates we want to follow the link
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
 
 &lt;span class="nd"&gt;@do_twice&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -256,6 +256,6 @@ The &lt;code&gt;{filename}&lt;/code&gt; tag indicates we want to follow the link
 def do_twice(func):
     def wrapper_do_twice(*args, **kwargs):
         return func(*args, **kwargs).lower()
-return wrapper_do_twice
+    return wrapper_do_twice
 ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="blogging"></category><category term="markdown"></category><category term="pygments"></category></entry></feed>
