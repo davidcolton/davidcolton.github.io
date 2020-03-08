@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>David's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-03-08T13:15:00+00:00</updated><subtitle>The ramblings of a frustated Python Data Scientist ...</subtitle><entry><title>Changing the Theme of my Blog</title><link href="/articles/2020/03/08/new_theme_for_blog/" rel="alternate"></link><published>2020-03-08T13:15:00+00:00</published><updated>2020-03-08T13:15:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-08:/articles/2020/03/08/new_theme_for_blog/</id><summary type="html">&lt;h1&gt;Adding a personal touch&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>David's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-03-08T22:55:00+00:00</updated><subtitle>The ramblings of a frustated Python Data Scientist ...</subtitle><entry><title>Changing the Theme of my Blog</title><link href="/articles/2020/03/08/new_theme_for_blog/" rel="alternate"></link><published>2020-03-08T13:15:00+00:00</published><updated>2020-03-08T22:55:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-08:/articles/2020/03/08/new_theme_for_blog/</id><summary type="html">&lt;h1&gt;Adding a personal touch&lt;/h1&gt;
 &lt;p&gt;In my last post &lt;a href="/articles/2020/03/04/building_my_blog/"&gt;Building My Blog&lt;/a&gt; I described how I followed a great tutorial to get my Blog site up and running with &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Adding a personal touch&lt;/h1&gt;
 &lt;p&gt;In my last post &lt;a href="/articles/2020/03/04/building_my_blog/"&gt;Building My Blog&lt;/a&gt; I described how I followed a great tutorial to get my Blog site up and running with &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my own personal tastes. I quickly narrowed my choices for the new theme down to three options:&lt;/p&gt;
 &lt;ol&gt;
@@ -158,7 +158,7 @@ pip install beautifulsoup4
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="python"></category><category term="blogging"></category></entry><entry><title>Building My Blog With Pelican And Python</title><link href="/articles/2020/03/04/building_my_blog/" rel="alternate"></link><published>2020-03-04T19:45:00+00:00</published><updated>2020-03-04T19:45:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-04:/articles/2020/03/04/building_my_blog/</id><summary type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
+&lt;/script&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="python"></category><category term="blogging"></category></entry><entry><title>Building My Blog With Pelican And Python</title><link href="/articles/2020/03/04/building_my_blog/" rel="alternate"></link><published>2020-03-04T19:45:00+00:00</published><updated>2020-03-08T22:55:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-04:/articles/2020/03/04/building_my_blog/</id><summary type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
 &lt;p&gt;It's all &lt;a href="@JnyJny"&gt;Erik O'Shaughnessy's&lt;/a&gt; fault. A little while ago he shared his tutorial &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;Run your blog on GitHub Pages with Python&lt;/a&gt; on the &lt;a href="@PyBites"&gt;PyBites&lt;/a&gt; Slack Channel. Creating my own blog is something that I had played around with before but never with much …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
 &lt;p&gt;It's all &lt;a href="@JnyJny"&gt;Erik O'Shaughnessy's&lt;/a&gt; fault. A little while ago he shared his tutorial &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;Run your blog on GitHub Pages with Python&lt;/a&gt; on the &lt;a href="@PyBites"&gt;PyBites&lt;/a&gt; Slack Channel. Creating my own blog is something that I had played around with before but never with much success. But hey I said, this looks easy, let's give it a go.&lt;/p&gt;
 &lt;h2&gt;Instant Results&lt;/h2&gt;
@@ -200,7 +200,7 @@ pip install beautifulsoup4
 &lt;li&gt;I want to try to make regular posts, at least 1 a fortnight&lt;/li&gt;
 &lt;li&gt;I'm hearing great things about using &lt;code&gt;make&lt;/code&gt; with Pelican. I need to investigate.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If you like this blog post or have any suggestions please leave a comment below.&lt;/p&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="python"></category><category term="blogging"></category></entry><entry><title>Pelican Markdown Test Page</title><link href="/articles/2020/02/23/markdown_examples/" rel="alternate"></link><published>2020-02-23T10:30:00+00:00</published><updated>2020-02-24T10:35:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-02-23:/articles/2020/02/23/markdown_examples/</id><summary type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
+&lt;p&gt;If you like this blog post or have any suggestions please leave a comment below.&lt;/p&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="python"></category><category term="blogging"></category></entry><entry><title>Pelican Markdown Test Page</title><link href="/articles/2020/02/23/markdown_examples/" rel="alternate"></link><published>2020-02-23T10:30:00+00:00</published><updated>2020-03-08T22:55:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-02-23:/articles/2020/02/23/markdown_examples/</id><summary type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
 &lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Examine how Markdown is rendered with Pelican&lt;/h1&gt;
 &lt;p&gt;These examples of markdown are a modified form taken from &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/"&gt;Build A Blog With Pelican And Python - Pt. 2 Creating Content&lt;/a&gt;. I did find some issues that I mention as I go through all the examples. I've also augmented the original examples with some additional samples of my own.&lt;/p&gt;
 &lt;p&gt;As a nice side affect of putting this page together I now have a reference page should I decide to change the Pelican theme I'm using to ensure that all my other articles are still rendering as expected as this test page contains most, if not all, of the markdown styles that I use on a regular basis.&lt;/p&gt;
@@ -317,7 +317,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 | Value 7 | Value 8 | Value 9 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And here is the table rendered:&lt;/p&gt;
-&lt;table class="table-striped table-hover table"&gt;
+&lt;table class="table table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Column1&lt;/th&gt;
@@ -360,7 +360,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 .tg .tg-lqy6{text-align:right;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
-&lt;table class="table-hover tg table-striped table"&gt;
+&lt;table class="tg table table-hover table-striped"&gt;
 &lt;tr&gt;
 &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
 &lt;/tr&gt;
