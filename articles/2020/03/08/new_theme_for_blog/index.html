@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Changing the Theme of my Blog | David's Blog
+</title>
+  <link rel="canonical" href="/articles/2020/03/08/new_theme_for_blog/index.html">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/monokai.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="/feeds/all.atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="/feeds/blogging.atom.xml">  
+  <meta name="description" content="Adding a personal touch In my last post Building My Blog I described how I followed a great tutorial to get my Blog site up and running with Pelican. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+    <div class="col-sm-4">
+      <a href="/">
+        <img class="img-fluid rounded" src=/images/python_programming.png width=150 height=150 alt="David's Blog">
+      </a>
+    </div>
+  <div class="col-sm-8">
+    <h1 class="title"><a href="/">David's Blog</a></h1>
+      <p class="text-muted">The ramblings of a frustated Python Data Scientist ...</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://python.org/" target="_blank">Python</a></li>
+          <li class="list-inline-item"><a href="http://codechalleng.es/" target="_blank">PyBites</a></li>
+            <li class=" list-inline-item text-muted">|</li>
+          <li class="list-inline-item"><a class="fab fa-twitter" href="https://twitter.com/David__Colton" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-github" href="https://github.com/davidcolton/" target="_blank"></a></li>
+          <li class="list-inline-item"><a class="fab fa-linkedin" href="https://www.linkedin.com/in/davidcolton/" target="_blank"></a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Changing the Theme of my Blog
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2020-03-08T13:15:00+00:00">
+          <i class="fas fa-clock"></i>
+          Sun 08 March 2020
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="/category/blogging">blogging</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="/tag/pelican">#pelican</a>,               <a href="/tag/python">#python</a>,               <a href="/tag/blogging">#blogging</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h1>Adding a personal touch</h1>
+<p>In my last post <a href="/articles/2020/03/04/building_my_blog/">Building My Blog</a> I described how I followed a great tutorial to get my Blog site up and running with <a href="https://github.com/getpelican/pelican">Pelican</a>. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my own personal tastes. I quickly narrowed my choices for the new theme down to three options:</p>
+<ol>
+<li><a href="https://github.com/nairobilug/pelican-alchemy">Alchemy</a></li>
+<li><a href="https://github.com/limbenjamin/voce">Voce</a></li>
+<li><a href="https://github.com/Pelican-Elegant/elegant">Elegant</a></li>
+</ol>
+<p>I really liked all three and the choice was difficult but in the end I settled for <strong>Alchemy</strong>. It is worth noting though that I decide to change theme again Voce and Elegant will immediately be in contention.</p>
+<hr/>
+<h1>Setting up Alchemy</h1>
+<p>The instruction on how to install and configure Alchemy are very will described on the Alchemy site so I won't regurgitate here, but these are the highlights.</p>
+<h2>Installation</h2>
+<p>I installed Alchemy as a Github sub-module so in your Pelican site:</p>
+<div class="highlight"><pre><span></span><code>mkdir themes
+git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy
+</code></pre></div>
+<p>And then in Pelican config:</p>
+<div class="highlight"><pre><span></span><code><span class="n">THEME</span> <span class="o">=</span> <span class="s1">'themes/pelican-alchemy/alchemy'</span>
+</code></pre></div>
+<h2>Plugins</h2>
+<p><a href="https://github.com/ingwinlu/pelican-bootstrapify">Bootstrapify</a> is used for rendered HTML. This was also installed as a Github sub-module.</p>
+<div class="highlight"><pre><span></span><code>mkdir plugins
+git submodule add https://github.com/ingwinlu/pelican-bootstrapify plugins/pelican-bootstrapify
+</code></pre></div>
+<p>And in Pelican config:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># http://docs.getpelican.com/en/stable/plugins.html#how-to-use-plugins</span>
+<span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'plugins'</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pelican-bootstrapify'</span><span class="p">]</span>
+
+<span class="n">BOOTSTRAPIFY</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'table'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'table'</span><span class="p">,</span> <span class="s1">'table-striped'</span><span class="p">,</span> <span class="s1">'table-hover'</span><span class="p">],</span>
+    <span class="s1">'img'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'img-fluid'</span><span class="p">],</span>
+    <span class="s1">'blockquote'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'blockquote'</span><span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>I already had both a <code>plugins</code> folder and plugins in use so no need for me to create the folder. I just added <code>pelican-bootstrapify</code> to my existing <code>PLUGINS</code> variable.</p>
+<p>The main reason I like this theme is this approach to tables. Hopefully I won't regret it in the future.</p>
+<h2>Favicons</h2>
+<p>I created a site image and then used <a href="http://realfavicongenerator.net/">Favicon Generator</a> to generate a favicon package and download it. I'll come back to the site image in a moment.</p>
+<p>Then, to install:</p>
+<div class="highlight"><pre><span></span><code>mkdir content/extras
+unzip &lt;PATH_TO_PACKAGE&gt;.zip -d content/extras
+</code></pre></div>
+<p>There was an extra step required here. I had to rename the supplied <code>site.webmanifest</code> file to <code>manifest.json</code></p>
+<p>And then in Pelican config and the <code>extras</code> folder to the <code>STATIC_PATHS</code> variable as well as the <code>EXTRA_PATH_METADATA</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># https://github.com/getpelican/pelican/wiki/Tips-n-Tricks#second-solution-using-static_paths</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'extras'</span><span class="p">,</span> <span class="s1">'images'</span><span class="p">]</span>
+<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"extras/android-chrome-192x192.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"android-chrome-192x192.png"</span><span class="p">},</span>
+    <span class="s2">"extras/android-chrome-512x512.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"android-chrome-512x512.png"</span><span class="p">},</span>
+    <span class="s2">"extras/apple-touch-icon.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"apple-touch-icon.png"</span><span class="p">},</span>
+    <span class="s2">"extras/browserconfig.xml"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"browserconfig.xml"</span><span class="p">},</span>
+    <span class="s2">"extras/favicon-16x16.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"favicon-16x16.png"</span><span class="p">},</span>
+    <span class="s2">"extras/favicon-32x32.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"favicon-32x32.png"</span><span class="p">},</span>
+    <span class="s2">"extras/favicon.ico"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"favicon.ico"</span><span class="p">},</span>
+    <span class="s2">"extras/manifest.json"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"manifest.json"</span><span class="p">},</span>
+    <span class="s2">"extras/mstile-150x150.png"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"mstile-150x150.png"</span><span class="p">},</span>
+    <span class="s2">"extras/safari-pinned-tab.svg"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"safari-pinned-tab.svg"</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">RFG_FAVICONS</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<h2>Other small details</h2>
+<p>In addition to the main changes above I also made a few smaller changes to complement the theme.</p>
+<ol>
+<li>I added a <code>SITESUBTITLE</code></li>
+<li>I added a <code>SITEIMAGE</code></li>
+<li>I added <code>ICONS</code></li>
+</ol>
+<p>The site subtitle is just a variable in your Pelican config file. Enough said. The site image wasn't too much bother either. I added the site image to the <code>images</code> folder that I'd previously created and then just added the variable to Pelican config:</p>
+<div class="highlight"><pre><span></span><code><span class="n">SITESUBTITLE</span> <span class="o">=</span> <span class="s2">"The ramblings of a frustated Python Data Scientist ..."</span>
+<span class="n">SITEIMAGE</span> <span class="o">=</span> <span class="s2">"/images/python_programming.png width=150 height=150"</span>
+</code></pre></div>
+<p>Icons took me a little while to understand and get working. The Alchemy theme does not have a side bar so the Social links need a new home. This is where Icons come in. I thought that I understood all this but for the life of me the Icons of my Social Links wouldn't appear, even though I could see them in the static HTML. This took too long to figure out and in the end I was kicking myself. I was doing everything perfect except that I didn't realise that the <a href="https://fontawesome.com/">Font Awesome</a> icons were case sensitive. Here is the working Icons entries in my Pelican config:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ICONS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"twitter"</span><span class="p">,</span> <span class="s2">"https://twitter.com/David__Colton"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"github"</span><span class="p">,</span> <span class="s2">"https://github.com/davidcolton/"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"linkedin"</span><span class="p">,</span> <span class="s2">"https://www.linkedin.com/in/davidcolton/"</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr/>
+<h1>Adding Maths</h1>
+<p>Part of what I've planned for this blog will mean I need the ability to add Mathematical formulas. <a href="https://pypi.org/project/pelican-render-math/">render_math</a> to the rescuer. When installing this plugin the instructions suggestion adding the entire <code>pelican-plugins</code> as a sub-module of my source tree. Not something I wanted to do. Instead I did clone the plugins repository but in it's own right and I then just copied the <code>render-math</code> plugin into the <code>plugins</code> folder. My Pelican config was then updated:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"plugins/"</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"pelican-bootstrapify"</span><span class="p">,</span> <span class="s2">"i18n_subsites"</span><span class="p">,</span> <span class="s2">"render_math"</span><span class="p">]</span>
+</code></pre></div>
+<p>And to check that everything is working as expected, some sample math formulas:</p>
+<div class="math">$$e=mc^2$$</div>
+<p>Look good. Basic maths working.</p>
+<hr/>
+<h1>Oh, before I forget</h1>
+<p>Before I forget you'll need to install Typogrify and BeautifulSoup4.</p>
+<div class="highlight"><pre><span></span><code>pip install typogrift
+pip install beautifulsoup4
+</code></pre></div>
+<p>This is not the last post on my setup and environment. I want to look closer at the options provided by <code>make</code> and also describe my development environment setup.</p>
+<p>More anon.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = '/articles/2020/03/08/new_theme_for_blog/index.html';
+      this.page.identifier = 'new_theme_for_blog';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//davidcoltonblog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

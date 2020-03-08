@@ -1,5 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>David Colton's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-03-04T19:45:00+00:00</updated><entry><title>Building My Blog With Pelican And Python</title><link href="/articles/2020/03/04/building_my_blog/" rel="alternate"></link><published>2020-03-04T19:45:00+00:00</published><updated>2020-03-04T19:45:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-04:/articles/2020/03/04/building_my_blog/</id><summary type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>David's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-03-08T13:15:00+00:00</updated><subtitle>The ramblings of a frustated Python Data Scientist ...</subtitle><entry><title>Changing the Theme of my Blog</title><link href="/articles/2020/03/08/new_theme_for_blog/" rel="alternate"></link><published>2020-03-08T13:15:00+00:00</published><updated>2020-03-08T13:15:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-08:/articles/2020/03/08/new_theme_for_blog/</id><summary type="html">&lt;h1&gt;Adding a personal touch&lt;/h1&gt;
+&lt;p&gt;In my last post &lt;a href="/articles/2020/03/04/building_my_blog/"&gt;Building My Blog&lt;/a&gt; I described how I followed a great tutorial to get my Blog site up and running with &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Adding a personal touch&lt;/h1&gt;
+&lt;p&gt;In my last post &lt;a href="/articles/2020/03/04/building_my_blog/"&gt;Building My Blog&lt;/a&gt; I described how I followed a great tutorial to get my Blog site up and running with &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;. However,before I start blogging in anger, I wanted to change the look of the site a bit to suit my own personal tastes. I quickly narrowed my choices for the new theme down to three options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/nairobilug/pelican-alchemy"&gt;Alchemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/limbenjamin/voce"&gt;Voce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;Elegant&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I really liked all three and the choice was difficult but in the end I settled for &lt;strong&gt;Alchemy&lt;/strong&gt;. It is worth noting though that I decide to change theme again Voce and Elegant will immediately be in contention.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h1&gt;Setting up Alchemy&lt;/h1&gt;
+&lt;p&gt;The instruction on how to install and configure Alchemy are very will described on the Alchemy site so I won't regurgitate here, but these are the highlights.&lt;/p&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;I installed Alchemy as a Github sub-module so in your Pelican site:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir themes
+git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And then in Pelican config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'themes/pelican-alchemy/alchemy'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Plugins&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/ingwinlu/pelican-bootstrapify"&gt;Bootstrapify&lt;/a&gt; is used for rendered HTML. This was also installed as a Github sub-module.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir plugins
+git submodule add https://github.com/ingwinlu/pelican-bootstrapify plugins/pelican-bootstrapify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And in Pelican config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# http://docs.getpelican.com/en/stable/plugins.html#how-to-use-plugins&lt;/span&gt;
+&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'plugins'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-bootstrapify'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;BOOTSTRAPIFY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;'table'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'table'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'table-striped'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'table-hover'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s1"&gt;'img'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'img-fluid'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s1"&gt;'blockquote'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'blockquote'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I already had both a &lt;code&gt;plugins&lt;/code&gt; folder and plugins in use so no need for me to create the folder. I just added &lt;code&gt;pelican-bootstrapify&lt;/code&gt; to my existing &lt;code&gt;PLUGINS&lt;/code&gt; variable.&lt;/p&gt;
+&lt;p&gt;The main reason I like this theme is this approach to tables. Hopefully I won't regret it in the future.&lt;/p&gt;
+&lt;h2&gt;Favicons&lt;/h2&gt;
+&lt;p&gt;I created a site image and then used &lt;a href="http://realfavicongenerator.net/"&gt;Favicon Generator&lt;/a&gt; to generate a favicon package and download it. I'll come back to the site image in a moment.&lt;/p&gt;
+&lt;p&gt;Then, to install:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir content/extras
+unzip &amp;lt;PATH_TO_PACKAGE&amp;gt;.zip -d content/extras
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There was an extra step required here. I had to rename the supplied &lt;code&gt;site.webmanifest&lt;/code&gt; file to &lt;code&gt;manifest.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And then in Pelican config and the &lt;code&gt;extras&lt;/code&gt; folder to the &lt;code&gt;STATIC_PATHS&lt;/code&gt; variable as well as the &lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# https://github.com/getpelican/pelican/wiki/Tips-n-Tricks#second-solution-using-static_paths&lt;/span&gt;
+&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'extras'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'images'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;EXTRA_PATH_METADATA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/android-chrome-192x192.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"android-chrome-192x192.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/android-chrome-512x512.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"android-chrome-512x512.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/apple-touch-icon.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"apple-touch-icon.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/browserconfig.xml"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"browserconfig.xml"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/favicon-16x16.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"favicon-16x16.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/favicon-32x32.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"favicon-32x32.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/favicon.ico"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"favicon.ico"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/manifest.json"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"manifest.json"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/mstile-150x150.png"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"mstile-150x150.png"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"extras/safari-pinned-tab.svg"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"path"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"safari-pinned-tab.svg"&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;RFG_FAVICONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Other small details&lt;/h2&gt;
+&lt;p&gt;In addition to the main changes above I also made a few smaller changes to complement the theme.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I added a &lt;code&gt;SITESUBTITLE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I added a &lt;code&gt;SITEIMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I added &lt;code&gt;ICONS&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The site subtitle is just a variable in your Pelican config file. Enough said. The site image wasn't too much bother either. I added the site image to the &lt;code&gt;images&lt;/code&gt; folder that I'd previously created and then just added the variable to Pelican config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;SITESUBTITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"The ramblings of a frustated Python Data Scientist ..."&lt;/span&gt;
+&lt;span class="n"&gt;SITEIMAGE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"/images/python_programming.png width=150 height=150"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Icons took me a little while to understand and get working. The Alchemy theme does not have a side bar so the Social links need a new home. This is where Icons come in. I thought that I understood all this but for the life of me the Icons of my Social Links wouldn't appear, even though I could see them in the static HTML. This took too long to figure out and in the end I was kicking myself. I was doing everything perfect except that I didn't realise that the &lt;a href="https://fontawesome.com/"&gt;Font Awesome&lt;/a&gt; icons were case sensitive. Here is the working Icons entries in my Pelican config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ICONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"twitter"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"https://twitter.com/David__Colton"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"github"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"https://github.com/davidcolton/"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"linkedin"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"https://www.linkedin.com/in/davidcolton/"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h1&gt;Adding Maths&lt;/h1&gt;
+&lt;p&gt;Part of what I've planned for this blog will mean I need the ability to add Mathematical formulas. &lt;a href="https://pypi.org/project/pelican-render-math/"&gt;render_math&lt;/a&gt; to the rescuer. When installing this plugin the instructions suggestion adding the entire &lt;code&gt;pelican-plugins&lt;/code&gt; as a sub-module of my source tree. Not something I wanted to do. Instead I did clone the plugins repository but in it's own right and I then just copied the &lt;code&gt;render-math&lt;/code&gt; plugin into the &lt;code&gt;plugins&lt;/code&gt; folder. My Pelican config was then updated:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"plugins/"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"pelican-bootstrapify"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"i18n_subsites"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"render_math"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And to check that everything is working as expected, some sample math formulas:&lt;/p&gt;
+&lt;div class="math"&gt;$$e=mc^2$$&lt;/div&gt;
+&lt;p&gt;Look good. Basic maths working.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h1&gt;Oh, before I forget&lt;/h1&gt;
+&lt;p&gt;Before I forget you'll need to install Typogrify and BeautifulSoup4.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install typogrift
+pip install beautifulsoup4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is not the last post on my setup and environment. I want to look closer at the options provided by &lt;code&gt;make&lt;/code&gt; and also describe my development environment setup.&lt;/p&gt;
+&lt;p&gt;More anon.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="blogging"></category><category term="pelican"></category><category term="python"></category><category term="blogging"></category></entry><entry><title>Building My Blog With Pelican And Python</title><link href="/articles/2020/03/04/building_my_blog/" rel="alternate"></link><published>2020-03-04T19:45:00+00:00</published><updated>2020-03-04T19:45:00+00:00</updated><author><name>David Colton</name></author><id>tag:None,2020-03-04:/articles/2020/03/04/building_my_blog/</id><summary type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
 &lt;p&gt;It's all &lt;a href="@JnyJny"&gt;Erik O'Shaughnessy's&lt;/a&gt; fault. A little while ago he shared his tutorial &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;Run your blog on GitHub Pages with Python&lt;/a&gt; on the &lt;a href="@PyBites"&gt;PyBites&lt;/a&gt; Slack Channel. Creating my own blog is something that I had played around with before but never with much …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Building My Blog With Pelican And Python&lt;/h1&gt;
 &lt;p&gt;It's all &lt;a href="@JnyJny"&gt;Erik O'Shaughnessy's&lt;/a&gt; fault. A little while ago he shared his tutorial &lt;a href="https://opensource.com/article/19/5/run-your-blog-github-pages-python"&gt;Run your blog on GitHub Pages with Python&lt;/a&gt; on the &lt;a href="@PyBites"&gt;PyBites&lt;/a&gt; Slack Channel. Creating my own blog is something that I had played around with before but never with much success. But hey I said, this looks easy, let's give it a go.&lt;/p&gt;
 &lt;h2&gt;Instant Results&lt;/h2&gt;
@@ -24,12 +183,10 @@
 &lt;p&gt;One gotcha. Initially, after running the commands described a second time, I found that the Github files in the output folder structure had been deleted as as part of the process to regenerate the static HTML content. Quick search and the solution was found. The following line needs to be added to your &lt;code&gt;publishconf.py&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;DELETE_OUTPUT_DIRECTORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;The downside of this is that you may now have to manually clean up renamed files etc. More investigation is required but for now this got me over this hurdle.&lt;/p&gt;
 &lt;h3&gt;Disqus Comments With Pelican&lt;/h3&gt;
 &lt;p&gt;The final task, for now, was to include the ability to add comments to the blog posts. Mathew to the rescue again. To quote directly from Mathew's article:&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;blockquote class="blockquote"&gt;
 &lt;p&gt;You can implement comments on your website but the trick is to use a service that will host it for you. &lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt; is a popular solution to this problem.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Once again the instructions and steps to follow were really clear and simple to follow. Withing minutes I had added comments to my blog. One small thing I noticed was that one of the screen shots was slightly out of date. You now have to scroll down the page a little to get the free advertisement. Job done.&lt;/p&gt;
@@ -62,10 +219,8 @@
 This text is *italic* and this text is also _italic_  
 This text is **_italic and bold_**
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt; and this text is also &lt;strong&gt;bold&lt;/strong&gt;   &lt;br&gt;
-This text is &lt;em&gt;italic&lt;/em&gt; and this text is also &lt;em&gt;italic&lt;/em&gt;&lt;br&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt; and this text is also &lt;strong&gt;bold&lt;/strong&gt; &lt;br/&gt;
+This text is &lt;em&gt;italic&lt;/em&gt; and this text is also &lt;em&gt;italic&lt;/em&gt;&lt;br/&gt;
 This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;You can add headers to your markdown to divide your posts into related sections:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# A H1 heading  
@@ -75,8 +230,6 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 ##### A H5 heading  
 ###### A H6 heading
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;h1&gt;A H1 heading&lt;/h1&gt;
 &lt;h2&gt;A H2 heading&lt;/h2&gt;
 &lt;h3&gt;A H3 heading&lt;/h3&gt;
@@ -86,17 +239,13 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 &lt;p&gt;A nice additional way to separate different sections of you post is to insert a horizontal line is to add three or more hyphens:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;hr&gt;
+&lt;hr/&gt;
 &lt;p&gt;In Mathew's original post he defines a list with numbers as:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A list with numbers:
 1. One
 2. Two
 3. Three
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;When rendered this looks like:&lt;/p&gt;
 &lt;p&gt;A list with numbers:
 1. One
@@ -114,8 +263,6 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 1. Two
 1. Three
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;And this is how it then correctly displays:&lt;/p&gt;
 &lt;p&gt;A list with numbers:&lt;/p&gt;
 &lt;ol&gt;
@@ -142,8 +289,6 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 1. Top Level Again  
     1. Sub level again
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;The list with bullets example suffers from the same issue as the numbered list in that the example markdown given does not have a blank line between the text and the bulleted list. In markdown you always have to place a blank line:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A list with bullets:
 
@@ -151,8 +296,6 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 * Two
 * Three
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;A list with bullets:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bullet&lt;/li&gt;
@@ -162,9 +305,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 &lt;p&gt;Here's a blockquote:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Simple is better than complex
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;blockquote&gt;
+&lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Simple is better than complex&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For some reason the example given my Mathew used &lt;code&gt;&amp;amp;gt;&lt;/code&gt;. Not sure why.&lt;/p&gt;
@@ -175,10 +316,8 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 | Value 4 | Value 5 | Value 6 |  
 | Value 7 | Value 8 | Value 9 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;And here is the table rendered:&lt;/p&gt;
-&lt;table&gt;
+&lt;table class="table-hover table-striped table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Column1&lt;/th&gt;
@@ -221,53 +360,51 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 .tg .tg-lqy6{text-align:right;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
-
-&lt;table class="tg"&gt;
-  &lt;tr&gt;
-    &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-hmp3"&gt;No&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;Competition&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;John&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;Adam&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;Robert&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;Paul&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-0lax"&gt;1&lt;/td&gt;
-    &lt;td class="tg-0lax"&gt;Swimming&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;1:30&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;2:05&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;1:15&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;1:41&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-hmp3"&gt;2&lt;/td&gt;
-    &lt;td class="tg-hmp3"&gt;Running&lt;/td&gt;
-    &lt;td class="tg-mb3i"&gt;15:30&lt;/td&gt;
-    &lt;td class="tg-mb3i"&gt;14:10&lt;/td&gt;
-    &lt;td class="tg-mb3i"&gt;15:45&lt;/td&gt;
-    &lt;td class="tg-mb3i"&gt;16:00&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="tg-0lax"&gt;3&lt;/td&gt;
-    &lt;td class="tg-0lax"&gt;Shooting&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;70%&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;55%&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;90%&lt;/td&gt;
-    &lt;td class="tg-lqy6"&gt;88%&lt;/td&gt;
-  &lt;/tr&gt;
+&lt;table class="table-hover table-striped table tg"&gt;
+&lt;tr&gt;
+&lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="tg-hmp3"&gt;No&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;Competition&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;John&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;Adam&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;Robert&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;Paul&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="tg-0lax"&gt;1&lt;/td&gt;
+&lt;td class="tg-0lax"&gt;Swimming&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;1:30&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;2:05&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;1:15&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;1:41&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="tg-hmp3"&gt;2&lt;/td&gt;
+&lt;td class="tg-hmp3"&gt;Running&lt;/td&gt;
+&lt;td class="tg-mb3i"&gt;15:30&lt;/td&gt;
+&lt;td class="tg-mb3i"&gt;14:10&lt;/td&gt;
+&lt;td class="tg-mb3i"&gt;15:45&lt;/td&gt;
+&lt;td class="tg-mb3i"&gt;16:00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class="tg-0lax"&gt;3&lt;/td&gt;
+&lt;td class="tg-0lax"&gt;Shooting&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;70%&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;55%&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;90%&lt;/td&gt;
+&lt;td class="tg-lqy6"&gt;88%&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tablesgenerator.com/html_tables"&gt;Table Generator&lt;/a&gt; is one simple way to generate HTML code for tables but there are many out there to choose from.&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr/&gt;
 &lt;h2&gt;Markdown Examples Part 2&lt;/h2&gt;
 &lt;p&gt;Images can be displayed in Markdown.  &lt;/p&gt;
-&lt;p&gt;Text within the square brackets is the image name. The path to the image goes between the round brackets.&lt;br&gt;
+&lt;p&gt;Text within the square brackets is the image name. The path to the image goes between the round brackets.&lt;br/&gt;
 The {static} tag indicates the image is stored in the content folder. This setting can be changed in &lt;code&gt;pelicanconf.py&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="python logo" src="/images/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="python logo" class="img-fluid" src="/images/python_icon.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Links to downloadable content such as PDF files are written similarly to image files but with no ! symbol at the beginning.&lt;/p&gt;
 &lt;p&gt;&lt;a href="/pdf/pelican.pdf"&gt;Pelican Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A link to a different blog post on our website is written exactly the same.&lt;/p&gt;
@@ -277,7 +414,7 @@ The &lt;code&gt;{filename}&lt;/code&gt; tag indicates we want to follow the link
 &lt;p&gt;Or we can link to another external website by supplying the web address.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://pypi.org"&gt;Python Package Index&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Refer to Mathew's page directly for the setting that need to be added to the &lt;code&gt;peliconconf.py&lt;/code&gt; file. One small disadvantage of having to define links using &lt;code&gt;{static}&lt;/code&gt; or &lt;code&gt;{filename}&lt;/code&gt; is that it makes editing the markdown files in a editor slightly more difficult as you are not actually going to see a preview or inline rendering of the link content. A small annoyance. &lt;/p&gt;
-&lt;hr&gt;
+&lt;hr/&gt;
 &lt;h2&gt;Markdown Examples Part 3&lt;/h2&gt;
 &lt;p&gt;Code blocks are preceded by an indent (4 spaces), three &lt;code&gt;:&lt;/code&gt; symbols and the name of the language.  &lt;/p&gt;
 &lt;p&gt;All of the following code will be highlighted while the text is indented.&lt;/p&gt;
@@ -290,11 +427,9 @@ The &lt;code&gt;{filename}&lt;/code&gt; tag indicates we want to follow the link
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee!&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Whee!'&lt;/span&gt;
 &lt;span class="n"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;And the raw markdown to produce this code block looks like:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;:::python
 def do_twice(func):
