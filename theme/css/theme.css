@@ -110,3 +110,10 @@ hr {
     margin-right: 10px;
   }
 }
+
+
+
+/* jupyter notebook */
+a.anchor-link {
+    visibility: hidden;
+}

@@ -1,0 +1,8 @@
+// jupyter notebook
+a.anchor-link {
+    visibility: hidden;
+}
+
+.prompt, .output_prompt {
+    visibility: hidden;
+}
