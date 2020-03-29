@@ -10,10 +10,12 @@
 &lt;p&gt;So option 3, taking my own path. My plan is to the take the excellent &lt;a href="https://www.khanacademy.org/"&gt;Khan Academy&lt;/a&gt; courses on:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/linear-algebra"&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calculus&lt;/li&gt;
+&lt;li&gt;Calculus&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/calculus-1"&gt;Calculus 1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/differential-calculus"&gt;Differential Calculus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/multivariable-calculus"&gt;Multivariable Calculus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/statistics-probability"&gt;Statistics Probability&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Or a variation of these. As I go through them I'm free to change direction and do something else or add additional courses (I still hold an interest of Six Sigma from my manufacturing days in Motorola). The catch, or the unique selling point, is that I'm also going to implement as much as I can in Python, where appropriate, so that I can prove to myself that I actually understand the concept and can implement them in code.&lt;/p&gt;
@@ -5485,7 +5487,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 | Value 7 | Value 8 | Value 9 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And here is the table rendered:&lt;/p&gt;
-&lt;table class="table-hover table-striped table"&gt;
+&lt;table class="table table-striped table-hover"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Column1&lt;/th&gt;
@@ -5528,7 +5530,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 .tg .tg-lqy6{text-align:right;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
-&lt;table class="table-hover tg table-striped table"&gt;
+&lt;table class="table tg table-hover table-striped"&gt;
 &lt;tr&gt;
 &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
 &lt;/tr&gt;

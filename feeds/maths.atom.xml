@@ -10,10 +10,12 @@
 &lt;p&gt;So option 3, taking my own path. My plan is to the take the excellent &lt;a href="https://www.khanacademy.org/"&gt;Khan Academy&lt;/a&gt; courses on:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/linear-algebra"&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calculus&lt;/li&gt;
+&lt;li&gt;Calculus&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/calculus-1"&gt;Calculus 1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/differential-calculus"&gt;Differential Calculus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/multivariable-calculus"&gt;Multivariable Calculus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.khanacademy.org/math/statistics-probability"&gt;Statistics Probability&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Or a variation of these. As I go through them I'm free to change direction and do something else or add additional courses (I still hold an interest of Six Sigma from my manufacturing days in Motorola). The catch, or the unique selling point, is that I'm also going to implement as much as I can in Python, where appropriate, so that I can prove to myself that I actually understand the concept and can implement them in code.&lt;/p&gt;
