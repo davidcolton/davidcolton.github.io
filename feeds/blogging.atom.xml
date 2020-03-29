@@ -355,7 +355,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 | Value 7 | Value 8 | Value 9 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And here is the table rendered:&lt;/p&gt;
-&lt;table class="table table-striped table-hover"&gt;
+&lt;table class="table-hover table-striped table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Column1&lt;/th&gt;
@@ -398,7 +398,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 .tg .tg-lqy6{text-align:right;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
-&lt;table class="table tg table-hover table-striped"&gt;
+&lt;table class="tg table-striped table table-hover"&gt;
 &lt;tr&gt;
 &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
 &lt;/tr&gt;
