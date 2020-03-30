@@ -200,13 +200,15 @@
 &lt;li&gt;Your choice of a presentation or blogpost. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr/&gt;
-&lt;p&gt;If you've gotten this far thank you for taking the time to read this post.&lt;/p&gt;</content><category term="datascience"></category><category term="datascience"></category><category term="python"></category></entry><entry><title>Learning Linear Algebra Title Page</title><link href="https://davidcolton.github.io/articles/2020/03/29/linear_algebra/" rel="alternate"></link><published>2020-03-29T09:15:00+01:00</published><updated>2020-03-29T09:15:00+01:00</updated><author><name>David Colton</name></author><id>tag:davidcolton.github.io,2020-03-29:/articles/2020/03/29/linear_algebra/</id><summary type="html">&lt;h1&gt;An introduction to Vectors for Linear Algebra&lt;/h1&gt;
+&lt;p&gt;If you've gotten this far thank you for taking the time to read this post.&lt;/p&gt;</content><category term="datascience"></category><category term="datascience"></category><category term="python"></category></entry><entry><title>Learning Linear Algebra Title Page</title><link href="https://davidcolton.github.io/articles/2020/03/29/linear_algebra/" rel="alternate"></link><published>2020-03-29T09:15:00+01:00</published><updated>2020-03-30T09:35:00+01:00</updated><author><name>David Colton</name></author><id>tag:davidcolton.github.io,2020-03-29:/articles/2020/03/29/linear_algebra/</id><summary type="html">&lt;h1&gt;An introduction to Vectors for Linear Algebra&lt;/h1&gt;
 &lt;p&gt;I've been doing Machine Learning (ML) and Data Science (DS) to various degrees of success for at least 5 years. If you add Business Intelligence (BI) and Databases and SQL into the mix add another 10 years. One thing that's always bugged me …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;An introduction to Vectors for Linear Algebra&lt;/h1&gt;
 &lt;p&gt;I've been doing Machine Learning (ML) and Data Science (DS) to various degrees of success for at least 5 years. If you add Business Intelligence (BI) and Databases and SQL into the mix add another 10 years. One thing that's always bugged me, that little voice in the back of my head, was that I had, at best, a fleeting grasp of the maths involved. Especially in relation to machine learning. So I've finally decided to &lt;strong&gt;&lt;em&gt;try&lt;/em&gt;&lt;/strong&gt; and do something about it.&lt;/p&gt;
-&lt;p&gt;What are my options:
-1. Take a course
-1. Read a book
-1. My own path&lt;/p&gt;
+&lt;p&gt;What are my options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Take a course&lt;/li&gt;
+&lt;li&gt;Read a book&lt;/li&gt;
+&lt;li&gt;My own path&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;Taking courses and reading books are great but I cheat. I'll watch the video, read the chapter and then decide that I don't need to do the sample exercises because I either think that I knew it all and didn't need to complete the exercises or, more likely, they looked hard and might actually take some time. So I usually bail.&lt;/p&gt;
 &lt;p&gt;So option 3, taking my own path. My plan is to the take the excellent &lt;a href="https://www.khanacademy.org/"&gt;Khan Academy&lt;/a&gt; courses on:&lt;/p&gt;
 &lt;ul&gt;
@@ -5731,7 +5733,7 @@ This text is &lt;strong&gt;&lt;em&gt;italic and bold&lt;/em&gt;&lt;/strong&gt;&l
 .tg .tg-lqy6{text-align:right;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 &lt;/style&gt;
-&lt;table class="tg table-hover table-striped table"&gt;
+&lt;table class="table table-striped table-hover tg"&gt;
 &lt;tr&gt;
 &lt;th class="tg-baqh" colspan="6"&gt;Results&lt;/th&gt;
 &lt;/tr&gt;
