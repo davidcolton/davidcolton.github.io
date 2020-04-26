@@ -1531,7 +1531,6 @@ $$
 
 <span class="c1"># Display vectors a and b</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector a: </span><span class="si">{a}</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector a: </span><span class="si">{b}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1542,7 +1541,6 @@ $$
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Vector a: [ 6 -2]
-Vector a: [-4  4]
 </pre>
 </div>
 </div>
@@ -1664,16 +1662,14 @@ $$
     \begin{bmatrix}
     1   \\
     0   \\
-    0
     \end{bmatrix} , 
     \vec{j} =
     \begin{bmatrix}
     0   \\
     1   \\
-    0
     \end{bmatrix}
 $$<p></p>
-<p>And the unit vectors in the direction of the x, y, and z axes of a two dimensional Cartesian $\Re^3$ coordinate system are as follows:</p>
+<p>And the unit vectors in the direction of the x, y, and z axes of a three dimensional Cartesian $\Re^3$ coordinate system are as follows:</p>
 $$
     \vec{i} =
     \begin{bmatrix}
@@ -1717,6 +1713,43 @@ $$
     \begin{bmatrix}
     2   \\
     3
+    \end{bmatrix} 
+$$<p></p>
+<p>Or an $\Re^3$ vector can be written in the form of the unit vectors like this:</p>
+$$
+    \vec{v} =
+    \begin{bmatrix}
+    2   \\
+    3   \\
+    4
+    \end{bmatrix} 
+    = 
+    2\vec{i} + 3\vec{j} + 4\vec{k}
+    =
+    2\begin{bmatrix}
+    1   \\
+    0   \\
+    0
+    \end{bmatrix}
+    + 
+    3
+    \begin{bmatrix}
+    0   \\
+    1   \\
+    0
+    \end{bmatrix}
+    + 
+    4
+    \begin{bmatrix}
+    0   \\
+    0   \\
+    1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    2   \\
+    3   \\
+    4
     \end{bmatrix} 
 $$<p></p>
 </div>
@@ -1780,6 +1813,63 @@ Vector j: [0 1]
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Vector v: [2 3]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create R3 unit vectors i, j &amp; k</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Display vectors i and j</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector i: </span><span class="si">{i}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector j: </span><span class="si">{j}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector k: </span><span class="si">{k}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vector i: [1 0 0]
+Vector j: [0 1 0]
+Vector k: [0 0 1]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Now create vector v</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">j</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vector v: </span><span class="si">{v}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vector v: [2 3 4]
 </pre>
 </div>
 </div>
@@ -1962,7 +2052,7 @@ $$y = 7 + 3t$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1990,7 +2080,7 @@ $$y = 7 + 3t$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 2</span>
@@ -2016,7 +2106,7 @@ $$y = 7 + 3t$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 3</span>
@@ -2042,7 +2132,7 @@ $$y = 7 + 3t$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 4</span>
@@ -2093,7 +2183,7 @@ $$ \Bigg( -\frac{5}{\sqrt{50}}, \frac{5}{\sqrt{50}} \Bigg)$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2122,7 +2212,7 @@ $$ \Bigg( -\frac{5}{\sqrt{50}}, \frac{5}{\sqrt{50}} \Bigg)$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 2</span>
@@ -2149,7 +2239,7 @@ $$ \Bigg( -\frac{5}{\sqrt{50}}, \frac{5}{\sqrt{50}} \Bigg)$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 3</span>
@@ -2176,7 +2266,7 @@ $$ \Bigg( -\frac{5}{\sqrt{50}}, \frac{5}{\sqrt{50}} \Bigg)$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Question 4</span>
@@ -2236,7 +2326,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -2252,7 +2342,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-4.92403877,  0.86824089])</pre>
 </div>
@@ -2262,7 +2352,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">opp_w</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">*</span> <span class="mi">8</span>
@@ -2276,7 +2366,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([ 4.        , -6.92820323])</pre>
 </div>
@@ -2286,7 +2376,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [23]:</div>
+<div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2297,7 +2387,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-0.92, -6.06])</pre>
 </div>
@@ -2332,7 +2422,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [24]:</div>
+<div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">adj_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="o">*</span> <span class="mi">8</span>
@@ -2346,7 +2436,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([7.51754097, 2.73616115])</pre>
 </div>
@@ -2356,7 +2446,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">opp_w</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">*</span> <span class="mi">5</span>
@@ -2370,7 +2460,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-2.5       , -4.33012702])</pre>
 </div>
@@ -2380,7 +2470,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2391,7 +2481,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([ 5.02, -1.59])</pre>
 </div>
@@ -2426,7 +2516,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">adj_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">*</span> <span class="mi">7</span>
@@ -2440,7 +2530,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([6.06217783, 3.5       ])</pre>
 </div>
@@ -2450,7 +2540,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [28]:</div>
+<div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">opp_w</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span> <span class="o">*</span> <span class="mi">4</span>
@@ -2464,7 +2554,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-3.06417777,  2.57115044])</pre>
 </div>
@@ -2474,7 +2564,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2485,7 +2575,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([3.  , 6.07])</pre>
 </div>
@@ -2523,7 +2613,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">adj_v</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="o">*</span> <span class="mi">5</span>
@@ -2537,7 +2627,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-4.92403877,  0.86824089])</pre>
 </div>
@@ -2547,7 +2637,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">opp_w</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="o">*</span> <span class="mi">6</span>
@@ -2561,7 +2651,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-1.04188907, -5.90884652])</pre>
 </div>
@@ -2571,7 +2661,7 @@ import numpy as np</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2582,7 +2672,7 @@ import numpy as np</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([-5.97, -5.04])</pre>
 </div>
